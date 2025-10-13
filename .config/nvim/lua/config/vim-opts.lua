@@ -6,28 +6,33 @@ vim.g.background = "light"
 vim.go.showtabline = 0
 vim.opt.swapfile = false
 
+-- split
+vim.keymap.set('n', '<leader>sp' ":vsplit<CR>")
+vim.keymap.set('n', 'X', ":vertical resize +5<CR>")
+vim.keymap.set('n', 'S', ":vertical resize -5<CR>")
+vim.keymap.set('n', 'Q', ":bdelete<CR>")
+vim.keymap.set('n', '<leader>gf', ":above vsplit<CR>gf")
+
+-- search
+vim.keymap.set('n', '<Esc>', "<Esc>:nohlsearch<CR>")
+vim.keymap.set('n', '#', '#N')
+vim.keymap.set('n', '*', '*N')
+
+-- others
+vim.keymap.set('n', '<C-P>', 'i<CR><Esc>0k')
+vim.keymap.set('n', '<C-N>', 'i<CR><Esc>')
+
 -- Navigate vim panes better
 vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
 vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
-vim.keymap.set('n', 'X', ":resize +5<CR>")
-vim.keymap.set('n', 'S', ":resize -5<CR>")
-vim.keymap.set('n', 'Q', ":bd<CR>")
-vim.keymap.set('n', '<Esc>', "<Esc>:nohlsearch<CR>")
-vim.keymap.set('n', '#', '#N')
-vim.keymap.set('n', '*', '*N')
-vim.keymap.set('n', '<C-P>', 'i<CR><Esc>0k')
-vim.keymap.set('n', '<C-N>', 'i<CR><Esc>')
 
 vim.keymap.set('t', '<C-q>', '<C-\\><C-n>')
 
 vim.keymap.set('n', '<leader>r', ':lua vim.wo.relativenumber=not vim.wo.relativenumber<CR>')
 vim.keymap.set('n', '<leader>t', ":execute \"belowright \" .. (&lines / 3) .. \"split +terminal\"<CR>:lua vim.wo.winfixheight=true<CR>:execute clearmatches()<CR>")
-vim.keymap.set('n', '<leader>sp', ":split<CR>")
-vim.keymap.set('n', '<leader>gf', ":above split<CR>gf")
-vim.keymap.set('n', '<leader>gF', ":above split<CR>gF")
 vim.keymap.set('n', '<leader>se', ":lua vim.diagnostic.open_float(0, {scope=\"line\", source=true})<CR>")
 
 vim.keymap.set('n', '<c-X>', function()

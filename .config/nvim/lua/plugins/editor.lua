@@ -162,13 +162,13 @@ return {
       vim.keymap.set('n', '<leader>h', ":HopWord<CR>", {remap=true})
     end,
   },
-  -- {
-  --   'windwp/nvim-autopairs',
-  --   event = "InsertEnter",
-  --   config = true
-  --   -- use opts = {} for passing setup options
-  --   -- this is equivalent to setup({}) function
-  -- },
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    config = true
+    -- use opts = {} for passing setup options
+    -- this is equivalent to setup({}) function
+  },
   {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",

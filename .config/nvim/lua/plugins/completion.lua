@@ -19,7 +19,7 @@ return {
       require("luasnip.loaders.from_vscode").lazy_load()
       vim.keymap.set('i', '<C-y>', function() cmp.complete() end)
       cmp.setup({
-        completion = {autocomplete=false},
+        completion = {autocomplete=true},
         snippet = {
           expand = function(args)
             require("luasnip").lsp_expand(args.body)
