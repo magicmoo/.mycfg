@@ -18,7 +18,7 @@ trap cleanup EXIT
 
 # clone bare repo
 if [ ! -d ".mycfg" ]; then
-    git clone --bare https://github.com/arusuki/.mycfg.git .mycfg
+    git clone --bare https://github.com/magicmoo/.mycfg.git .mycfg
     $CONFIG checkout
 fi
 $CONFIG config --local status.showUntrackedFiles no
