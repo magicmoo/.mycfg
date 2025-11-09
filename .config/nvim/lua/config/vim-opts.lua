@@ -7,7 +7,7 @@ vim.go.showtabline = 0
 vim.opt.swapfile = false
 
 -- split
-vim.keymap.set('n', '<leader>sp' ":vsplit<CR>")
+vim.keymap.set('n', '<leader>sp', ":vsplit<CR>")
 vim.keymap.set('n', 'X', ":vertical resize +5<CR>")
 vim.keymap.set('n', 'S', ":vertical resize -5<CR>")
 vim.keymap.set('n', 'Q', ":bdelete<CR>")
