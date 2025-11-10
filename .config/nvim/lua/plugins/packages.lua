@@ -12,8 +12,8 @@ return {
     },
     config = function()
       require("mason-lspconfig").setup {
-        automatic_enable = false,
-        ensure_installed = { "ruff", "pyright", "marksman"},
+        automatic_enable = true,
+        ensure_installed = { "clangd", "ruff", "pyright", "marksman"},
       }
     end
   },
